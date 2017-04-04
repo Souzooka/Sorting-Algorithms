@@ -1,0 +1,24 @@
+{
+  "name": "Sorting-Algorithms",
+  "version": "1.0.0",
+  "description": "For this assignment you will be responsible for the following:",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Souzooka/Sorting-Algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Souzooka/Sorting-Algorithms/issues"
+  },
+  "homepage": "https://github.com/Souzooka/Sorting-Algorithms#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
