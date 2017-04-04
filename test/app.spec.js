@@ -2,11 +2,31 @@ var chai = require('chai');
 var expect = chai.expect;
 var sortingModule = require('../app.js')();
 
-describe('Bubble sort', () => {
+var sortedArray = [];
+var reverseSortedArray = [];
+
+for (let i = 0; i < 1000; ++i) {
+  sortedArray.push(i);
+}
+
+for (let i = 0; i < 1000; ++i) {
+  reverseSortedArray.unshift(i);
+}
+
+describe('Bubble Sort', () => {
   var bubbleSort = sortingModule.bubbleSort;
 
   it('should sort an array', () => {
-    expect(bubbleSort([3, 2, 1])).to.be.deep.equal([1, 2, 3]);
+    expect(bubbleSort(reverseSortedArray)).to.be.deep.equal(sortedArray);
+  });
+
+});
+
+describe('Quick Sort', () => {
+  var quickSort = sortingModule.quickSort;
+
+  it('should sort an array', () => {
+    expect(quickSort(reverseSortedArray)).to.be.deep.equal(sortedArray);
   });
 
 });
