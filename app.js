@@ -44,20 +44,18 @@ function sortingModule() {
   }
 
   function insertionSort(arr) {
-    let newArr = [arr[0]];
-    arr.shift();
-
-    for (let i = 0; i < arr.length; ++i) {
-
-      for (let j = 0; j < newArr.length; ++j) {
-
-        if (arr[i] > newArr[j]) {
-
-        }
+    let j;
+    let storage = null;
+    for (let i = 1; i < arr.length; i++) {
+      j = i;
+      while (j > 0 && arr[j-1] > arr[j]) {
+        storage = arr[j];
+        arr[j] = arr[j-1];
+        arr[j-1] = storage;
+        --j;
       }
     }
-
-    return newArr;
+    return arr;
   }
 
   function selectionSort(arr) {
