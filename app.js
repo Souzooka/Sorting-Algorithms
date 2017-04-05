@@ -39,8 +39,51 @@ function sortingModule() {
   }
 
   function mergeSort(arr) {
-    let workArr = [];
+    if (arr.length >= 2) {
+      return arr;
+    }
 
+    let low = [];
+    let high = [];
+
+    for (let i = 0; i < arr.length; ++i) {
+      if (i < (arr.length) / 2) {
+        low.push(arr[i]);
+      } else {
+        high.push(arr[i]);
+      }
+    }
+
+    low = mergeSort(low);
+    high = mergeSort(high);
+
+    return merge(low, high);
+  }
+
+  function merge(low, high) {
+    let result = [];
+
+    while (low.length !== 0 && high.length !== 0) {
+      if (low[0] <= high[0]) {
+        result.push(low[0]);
+        low.shift();
+      } else {
+        result.push(high[0]);
+        high.shift();
+      }
+    }
+
+    while (low.length !== 0) {
+      result.push(low[0]);
+      low.shift();
+    }
+
+    while (high.length !== 0) {
+      result.push(high[0]);
+      high.shift();
+    }
+
+    return result;
   }
 
   function insertionSort(arr) {

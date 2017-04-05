@@ -34,7 +34,7 @@ describe('Quick Sort', () => {
 describe('Merge Sort', () => {
   var mergeSort = sortingModule.mergeSort;
 
-  it.skip('should sort an array', () => {
+  it('should sort an array', () => {
     expect(mergeSort(reverseSortedArray)).to.be.deep.equal(sortedArray);
   });
 
