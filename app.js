@@ -38,9 +38,45 @@ function sortingModule() {
     return arr;
   }
 
+  function mergeSort(arr) {
+    let workArr = [];
+
+  }
+
+  function insertionSort(arr) {
+    let newArr = [arr[0]];
+    arr.shift();
+
+    for (let i = 0; i < arr.length; ++i) {
+      for (let j = newArr.length-1; j >= 0; --j) {
+        if (j === 0) {
+          if (arr[i] > newArr[j]) {
+            newArr.splice(j+1, 0, arr[i]);
+          } else {
+            newArr.splice(j, 0, arr[i]);
+          }
+          break;
+        }
+        else if (arr[i] < newArr[j] && arr[i] > newArr[j]) {
+          newArr.splice(j, 0, arr[i]);
+          break;
+        }
+      }
+    }
+
+    return newArr;
+  }
+
+  function selectionSort(arr) {
+
+  }
+
   return {
     bubbleSort,
-    quickSort
+    quickSort,
+    mergeSort,
+    insertionSort,
+    selectionSort
   };
 }
 
