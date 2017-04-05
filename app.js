@@ -48,18 +48,11 @@ function sortingModule() {
     arr.shift();
 
     for (let i = 0; i < arr.length; ++i) {
-      for (let j = newArr.length-1; j >= 0; --j) {
-        if (j === 0) {
-          if (arr[i] > newArr[j]) {
-            newArr.splice(j+1, 0, arr[i]);
-          } else {
-            newArr.splice(j, 0, arr[i]);
-          }
-          break;
-        }
-        else if (arr[i] < newArr[j] && arr[i] > newArr[j]) {
-          newArr.splice(j, 0, arr[i]);
-          break;
+
+      for (let j = 0; j < newArr.length; ++j) {
+
+        if (arr[i] > newArr[j]) {
+
         }
       }
     }
@@ -68,7 +61,22 @@ function sortingModule() {
   }
 
   function selectionSort(arr) {
+    let newArr = [];
+    let lowestNum = -Infinity;
+    let lowestNumIndex = 0;
+    let originalLength = arr.length;
 
+    for (let i = 0; i < originalLength; ++i) {
+      for (let j = 0; j < arr.length; ++j) {
+        if (lowestNum > arr[j]) {
+          lowestNum = arr[j];
+          lowestNumIndex = j;
+        }
+      }
+      newArr.push(arr[lowestNumIndex]);
+      arr.splice(lowestNumIndex, 1);
+    }
+    return newArr;
   }
 
   return {

@@ -5,11 +5,11 @@ var sortingModule = require('../app.js')();
 var sortedArray = [];
 var reverseSortedArray = [];
 
-for (let i = 0; i < 1000; ++i) {
+for (let i = 0; i < 100; ++i) {
   sortedArray.push(i);
 }
 
-for (let i = 0; i < 1000; ++i) {
+for (let i = 0; i < 100; ++i) {
   reverseSortedArray.unshift(i);
 }
 
@@ -45,6 +45,7 @@ describe('Insertion Sort', () => {
 
   it('should sort an array', () => {
     expect(insertionSort([23, 7, 10, 6])).to.be.deep.equal([6, 7, 10, 23]);
+    expect(insertionSort(reverseSortedArray)).to.be.deep.equal(sortedArray);
   });
 
 });
