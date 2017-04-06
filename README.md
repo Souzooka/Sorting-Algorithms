@@ -48,3 +48,5 @@ bubbleSort(arr)
 The best case for this algorithm is O(n), assuming an already sorted array.
 
 The worst and average case for this algorithm is O(n^2), with the very worst array that can be passed into this sort being a reverse-sorted array.
+
+As a special note, an alternate version of this algorithm, Cocktail Shaker Sort, works by doing a reverse loop and sort after the forward loop. In most cases, this variant is faster than the vanilla Bubble Sort.
