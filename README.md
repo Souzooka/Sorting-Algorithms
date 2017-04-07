@@ -72,3 +72,15 @@ The best case for this algorithm is O(n), assuming an already sorted array.
 The worst and average case for this algorithm is O(n^2), with the very worst array that can be passed into this sort being a reverse-sorted array.
 
 However, this algorithm has benefits over other algorithms. For example, it has a constant space requirement, only requiring space for the element being sorted. It also allows new elements to easily be inserted into an already sorted array, making it beneficial if all of the data to be sorted is not available yet.
+
+### Selection Sort
+
+Selection sort is similar to bubble sort in the sense that it only sorts one element for each iteration of the array. However, instead of swapping elements each time a discrepancy is detected, the algorithm records the smallest element in the array as it is being iterated over. After the iteration is complete, then the smallest element is placed at the beginning of the currently unsorted elements.
+
+#### Psuedo-Code
+
+//
+
+#### Algorithm efficiency
+
+//
