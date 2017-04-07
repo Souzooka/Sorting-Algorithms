@@ -50,3 +50,25 @@ The best case for this algorithm is O(n), assuming an already sorted array.
 The worst and average case for this algorithm is O(n^2), with the very worst array that can be passed into this sort being a reverse-sorted array.
 
 As a special note, an alternate version of this algorithm, Cocktail Shaker Sort, works by doing a reverse loop and sort after the forward loop. In most cases, this variant is faster than the vanilla Bubble Sort.
+
+### Insertion Sort
+
+Insertion Sort is an algorithm that sorts an array by iterating over each element in the array and inserting them into their correct positions in a new array according to their size.
+
+#### Psuedo-Code
+
+```
+for i = 1 until the end of the array
+  j = i
+  while j > 0 and array[j-1] > array[j]
+    swap array[j] and array[j-1]
+    j = j-1
+return sorted array
+```
+#### Algorithm efficiency
+
+The best case for this algorithm is O(n), assuming an already sorted array.
+
+The worst and average case for this algorithm is O(n^2), with the very worst array that can be passed into this sort being a reverse-sorted array.
+
+However, this algorithm has benefits over other algorithms. For example, it has a constant space requirement, only requiring space for the element being sorted. It also allows new elements to easily be inserted into an already sorted array, making it beneficial if all of the data to be sorted is not available yet.
